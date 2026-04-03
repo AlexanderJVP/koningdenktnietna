@@ -11,3 +11,6 @@ out/
 .dev.vars*
 !.dev.vars.example
 !.env.example
+
+# nested repo folder
+koningdenktnietna/
