@@ -1,0 +1,151 @@
+/* ── Hero ── */
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 3rem;
+  }
+  .heroAfbeelding { order: -1; }
+}
+
+.heroTitel {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.heroTekst {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--grijs);
+  margin-bottom: 1.8rem;
+}
+
+.heroKnoppen {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroAfbeelding {
+  max-width: 380px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.heroFoto {
+  object-fit: cover;
+}
+
+/* ── Boeken spotlight ── */
+.boekenSectie {
+  background: var(--blauw);
+  max-width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.boekenSectie > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.boekenRij {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.spotlightKaart {
+  background: var(--wit);
+  border: 2.5px solid var(--rand);
+  border-radius: 4px 16px 8px 12px / 12px 8px 16px 4px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.spotlightKaart:hover {
+  transform: rotate(-1deg) translateY(-4px);
+  box-shadow: 5px 6px 0 var(--rand);
+}
+
+.spotlightAfbeeldingContainer {
+  position: relative;
+  width: calc(100% + 3rem);
+  margin: -1.5rem -1.5rem 0.8rem -1.5rem;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.spotlightAfbeelding {
+  object-fit: cover;
+}
+
+.spotlightTitel {
+  font-size: 1.8rem;
+}
+
+.spotlightTekst {
+  color: var(--grijs);
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* ── Over ── */
+.overSectie {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .overSectie {
+    grid-template-columns: 1fr;
+  }
+}
+
+.overAfbeelding {
+  max-width: 460px;
+  width: 100%;
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.overFoto {
+  object-fit: cover;
+}
+
+.overTekst {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.overTekst p {
+  line-height: 1.7;
+  color: var(--grijs);
+}

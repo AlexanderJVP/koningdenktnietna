@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Nunito:wght@400;600&display=swap');
+
+/* ── Kleurvariabelen ── */
+:root {
+  --blauw:    #A8CFEA;
+  --geel:     #FFD166;
+  --rood:     #EF6C6C;
+  --groen:    #78C69A;
+  --paars:    #C3A8E8;
+  --wit:      #FFFFFF;
+  --achtergrond: #FDFCF8;
+  --donker:   #2C2C2C;
+  --grijs:    #6B6B6B;
+  --rand:     #2C2C2C;
+}
+
+/* ── Reset & basis ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--achtergrond);
+  color: var(--donker);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, nav a, .getekend {
+  font-family: 'Caveat', cursive;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  flex: 1;
+}
+
+/* ── Getekende rand utility ── */
+.getekende-rand {
+  border: 2.5px solid var(--rand);
+  border-radius: 4px 12px 6px 10px / 10px 6px 12px 4px;
+}
+
+/* ── Knoppen ── */
+.knop {
+  display: inline-block;
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0.6rem 1.8rem;
+  border: 2.5px solid var(--rand);
+  border-radius: 4px 14px 6px 12px / 12px 6px 14px 4px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background: var(--geel);
+  color: var(--donker);
+}
+
+.knop:hover {
+  transform: rotate(-1deg) scale(1.04);
+  box-shadow: 3px 4px 0 var(--rand);
+}
+
+.knop:active {
+  transform: rotate(0deg) scale(0.98);
+  box-shadow: 1px 2px 0 var(--rand);
+}
+
+.knop-blauw  { background: var(--blauw); }
+.knop-groen  { background: var(--groen); }
+.knop-paars  { background: var(--paars); }
+.knop-rood   { background: var(--rood);  }
+
+/* ── Placeholderplaatje ── */
+.placeholder-afbeelding {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: repeating-linear-gradient(
+    45deg,
+    #e8e4dc,
+    #e8e4dc 10px,
+    #f0ece4 10px,
+    #f0ece4 20px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  color: var(--grijs);
+  border: 2.5px solid var(--rand);
+  border-radius: 4px 12px 6px 10px / 10px 6px 12px 4px;
+}
+
+.placeholder-logo {
+  width: 200px;
+  height: 60px;
+  background: var(--geel);
+  border: 2.5px solid var(--rand);
+  border-radius: 4px 12px 6px 10px / 10px 6px 12px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* ── Sectie spacering ── */
+.sectie {
+  padding: 4rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sectie-titel {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectie-titel::after {
+  content: '';
+  display: block;
+  height: 4px;
+  background: var(--geel);
+  border-radius: 2px;
+  margin-top: 4px;
+}

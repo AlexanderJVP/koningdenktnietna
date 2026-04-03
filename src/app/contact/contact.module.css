@@ -1,0 +1,105 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 720px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.intro {
+  color: var(--grijs);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.gegevens {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+
+.link {
+  color: var(--donker);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.illustratie {
+  max-width: 260px;
+}
+
+.foto {
+  width: 100%;
+  height: auto;
+  border-radius: 4px 16px 8px 12px / 12px 8px 16px 4px;
+  border: 2.5px solid var(--rand);
+}
+
+/* ── Formulier ── */
+.formulier {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: var(--wit);
+  border: 2.5px solid var(--rand);
+  border-radius: 4px 16px 8px 12px / 12px 8px 16px 4px;
+  padding: 2rem;
+}
+
+.veld {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.veld label {
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.veld input,
+.veld textarea {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  padding: 0.6rem 0.9rem;
+  border: 2px solid var(--rand);
+  border-radius: 4px 10px 5px 8px / 8px 5px 10px 4px;
+  background: var(--achtergrond);
+  color: var(--donker);
+  transition: border-color 0.15s, box-shadow 0.15s;
+  resize: vertical;
+}
+
+.veld input:focus,
+.veld textarea:focus {
+  outline: none;
+  border-color: var(--blauw);
+  box-shadow: 0 0 0 3px rgba(168, 207, 234, 0.4);
+}
+
+.succesmelding {
+  color: #2a7a3b;
+  background: #d4edda;
+  border: 1.5px solid #2a7a3b;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+}
+
+.foutmelding {
+  color: #842029;
+  background: #f8d7da;
+  border: 1.5px solid #842029;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,12 @@
+.footer {
+  border-top: 2.5px solid var(--rand);
+  background: var(--wit);
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+}
+
+.tekst {
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  color: var(--grijs);
+}

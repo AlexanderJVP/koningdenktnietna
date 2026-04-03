@@ -1,0 +1,84 @@
+.intro {
+  color: var(--grijs);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.lijst {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.bericht {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  border: 2.5px solid var(--rand);
+  border-radius: 4px 16px 8px 12px / 12px 8px 16px 4px;
+  overflow: hidden;
+  background: var(--wit);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bericht:hover {
+  transform: rotate(-0.5deg) translateY(-3px);
+  box-shadow: 4px 5px 0 var(--rand);
+}
+
+@media (max-width: 650px) {
+  .bericht {
+    grid-template-columns: 1fr;
+  }
+}
+
+.berichtAfbeelding {
+  min-height: 180px;
+}
+
+.berichtAfbeelding .placeholder-afbeelding {
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  border-right: 2.5px solid var(--rand);
+}
+
+.berichtInhoud {
+  padding: 1.4rem 1.4rem 1.4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+@media (max-width: 650px) {
+  .berichtInhoud {
+    padding: 1.2rem;
+  }
+}
+
+.datum {
+  font-size: 0.85rem;
+  color: var(--grijs);
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+}
+
+.berichtTitel {
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.uittreksel {
+  color: var(--grijs);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.leesWeer {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  color: var(--grijs);
+  font-style: italic;
+}

@@ -1,0 +1,46 @@
+.kaart {
+  border: 2.5px solid var(--rand);
+  border-radius: 4px 16px 8px 12px / 12px 8px 16px 4px;
+  overflow: hidden;
+  background: var(--wit);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.kaart:hover {
+  transform: rotate(-1deg) translateY(-4px);
+  box-shadow: 5px 6px 0 var(--rand);
+}
+
+.info {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex: 1;
+}
+
+.titel {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.beschrijving {
+  font-size: 0.95rem;
+  color: var(--grijs);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.prijs {
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--donker);
+}
+
+.knop {
+  text-align: center;
+  width: 100%;
+}
